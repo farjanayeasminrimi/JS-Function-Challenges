@@ -8,7 +8,7 @@ function inchToFeet(inch) {
   return result;
 }
 let feet = inchToFeet(75);
-// console.log(feet);
+console.log(feet);
 
 ////////////////////////////////////////////////////////
 
@@ -23,7 +23,7 @@ function checkLeapYear(year) {
     console.log(year, " is not a leap year");
   }
 }
-// checkLeapYear(2100);
+checkLeapYear(2100);
 
 //////////////////////////////////////////////////////////////
 
@@ -46,8 +46,8 @@ function oddAvg(arr) {
   const avg = sum / odd.length;
   console.log(avg);
 }
-// const numbers = [12, 3, 5, 23, 67, 8, 32];
-// oddAvg(numbers);
+const numbers = [12, 3, 5, 23, 67, 8, 32];
+oddAvg(numbers);
 
 ////////////////////////////////////////////////////////////
 
@@ -66,7 +66,7 @@ function filtering(arr) {
 }
 let array = ["robita", "nobita", "kobita", "robita", "nobita", "kotha", "ruba", "robita"];
 const filterArray = filtering(array);
-// console.log(filterArray);
+console.log(filterArray);
 
 ////////////////////////////////////////////////////////////
 
@@ -99,7 +99,7 @@ function wordFrequency(sentence) {
 }
 const sentence = `I love JS and I love coding and JS js is fun Fun`;
 let result = wordFrequency(sentence);
-// console.log(result);
+console.log(result);
 
 /////////////////////////////////////////////////////////////////
 
@@ -145,6 +145,4 @@ function analyzeMarks(marksObj) {
 }
 const obj = { math: 78, english: 65, physics: 88, bangla: 55 };
 const output = analyzeMarks(obj);
-// console.log(output);
-
-//////////////////////////////////////////////////////////
+console.log(output);
