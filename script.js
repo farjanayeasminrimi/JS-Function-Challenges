@@ -102,3 +102,49 @@ let result = wordFrequency(sentence);
 // console.log(result);
 
 /////////////////////////////////////////////////////////////////
+
+/*
+Problem 2: Student Marks Analyzer
+Function name: analyzeMarks(marksObj)
+Statement:
+ Return total marks, average marks, highest scoring subject, and lowest scoring subject.
+
+Test case 1
+Input: { math: 78, english: 65, physics: 88, bangla: 55 }
+Output: { total: 286, average: 71.5, highest: "physics", lowest: "bangla" }
+*/
+
+function analyzeMarks(marksObj) {
+  let total = 0;
+  let max = -Infinity;
+  let min = Infinity;
+  let highestSubject;
+  let lowestSubject;
+  for (let subject in marksObj) {
+    let mark = marksObj[subject];
+    total += mark;
+    /*----------------------------------------- */
+    if (mark > max) {
+      max = mark;
+      highestSubject = subject;
+    }
+    if (mark < min) {
+      min = mark;
+      lowestSubject = subject;
+    }
+  }
+  const length = Object.keys(marksObj).length;
+  const average = total / length;
+
+  return {
+    total,
+    average,
+    highest: highestSubject,
+    lowest: lowestSubject,
+  };
+}
+const obj = { math: 78, english: 65, physics: 88, bangla: 55 };
+const output = analyzeMarks(obj);
+// console.log(output);
+
+//////////////////////////////////////////////////////////
